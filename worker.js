@@ -39,9 +39,10 @@ function generateToken() {
 // Main handler
 export default {
   async fetch(request, env) {
-    const url = new URL(request.url);
-    const path = url.pathname;
-    const method = request.method;
+    try {
+      const url = new URL(request.url);
+      const path = url.pathname;
+      const method = request.method;
 
     // Handle CORS preflight
     if (method === 'OPTIONS') {
@@ -331,6 +332,8 @@ export default {
     }
 
     return jsonResponse({ error: 'Not found' }, 404);
+    } catch (e) {
+      return jsonResponse({ error: e.message, stack: e.stack }, 500);
+    }
   },
 };
-// v2
