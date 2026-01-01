@@ -1,3 +1,13 @@
-name = "chief-of-staff"
+name = "chief-of-staff-worker"
 main = "worker.js"
 compatibility_date = "2024-01-01"
+
+[[kv_namespaces]]
+binding = "KV"
+id = "9eed0062a54849f6bc4180c3b7079722"
+
+[vars]
+GMAIL_CLIENT_ID = "70385995456-0p7sitnbbs87o2ut5shb5hn359m9b68m.apps.googleusercontent.com"
+GMAIL_CLIENT_SECRET = "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"
+GMAIL_ACCOUNTS = "rknoerk@binaryminds.com,robert@knoerk.com"
+API_KEY = "cos-2026-mobile"
